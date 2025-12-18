@@ -23,7 +23,7 @@ npm install
 
 ### Development
 - **Watch mode**: `npm run watch` (auto-rebuilds and serves docs on changes)
-- **Serve docs locally**: `npm run serve` (runs at http://localhost:8000)
+- **Serve docs locally**: `npm run serve` (typically runs on port 8000, e.g., http://localhost:8000)
 
 ## Code Structure
 
@@ -75,7 +75,7 @@ The repository uses GitHub Actions for continuous integration:
 - **Linting**: Validates OpenRPC spec, GraphQL schema, and runs spellcheck
 - **Testing**: Runs speccheck to validate specification against test cases
 - **Node.js version**: Tests run on Node.js 22
-- **Go version**: Requires Go 1.18+ for speccheck tool
+- **Go version**: Requires Go 1.18 or later (compatible with 1.18+) for speccheck tool
 
 ## Common Tasks for Copilot
 
@@ -108,4 +108,4 @@ The repository uses GitHub Actions for continuous integration:
 - Changes require consensus from Ethereum client teams
 - See `docs/reference/contributors-guide.md` for the full standardization process
 - Breaking changes to existing methods are not accepted
-- Always coordinate major changes through AllCoreDevs calls
+- Always coordinate major changes through AllCoreDevs (All Core Developers) calls - the regular meetings where Ethereum protocol developers discuss and coordinate changes
