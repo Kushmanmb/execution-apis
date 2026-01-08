@@ -41,7 +41,7 @@ $ git stash pop
 
 **Save stash with a descriptive message:**
 ```console
-$ git stash save "WIP: implementing new API method"
+$ git stash push -m "WIP: implementing new API method"
 ```
 
 **Stash including untracked files:**
@@ -92,7 +92,7 @@ This applies the changes from commit `3a2b1c4` to your current branch.
 $ git cherry-pick A^..B
 ```
 
-This picks all commits from A (exclusive) to B (inclusive).
+This picks all commits from the parent of A to B (inclusive), effectively excluding A itself.
 
 **Cherry-pick multiple specific commits:**
 ```console
