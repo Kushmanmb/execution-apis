@@ -24,10 +24,7 @@ methodFiles.forEach(file => {
   console.log(file);
   let raw = fs.readFileSync(methodsBase + file);
   let parsed = yaml.load(raw);
-  methods = [
-    ...methods,
-    ...parsed,
-  ];
+  methods.push(...parsed);
 });
 
 methodsBase = "src/debug/";
@@ -36,10 +33,7 @@ methodFiles.forEach(file => {
   console.log(file);
   let raw = fs.readFileSync(methodsBase + file);
   let parsed = yaml.load(raw);
-  methods = [
-    ...methods,
-    ...parsed,
-  ];
+  methods.push(...parsed);
 });
 
 methodsBase = "src/engine/openrpc/methods/";
@@ -48,10 +42,7 @@ methodFiles.forEach(file => {
   console.log(file);
   let raw = fs.readFileSync(methodsBase + file);
   let parsed = yaml.load(raw);
-  methods = [
-    ...methods,
-    ...parsed,
-  ];
+  methods.push(...parsed);
 });
 
 let schemas = {};
@@ -61,10 +52,7 @@ schemaFiles.forEach(file => {
   console.log(file);
   let raw = fs.readFileSync(schemasBase + file);
   let parsed = yaml.load(raw);
-  schemas = {
-    ...schemas,
-    ...parsed,
-  };
+  Object.assign(schemas, parsed);
 });
 
 schemasBase = "src/engine/openrpc/schemas/"
@@ -73,10 +61,7 @@ schemaFiles.forEach(file => {
   console.log(file);
   let raw = fs.readFileSync(schemasBase + file);
   let parsed = yaml.load(raw);
-  schemas = {
-    ...schemas,
-    ...parsed,
-  };
+  Object.assign(schemas, parsed);
 });
 
 const doc = {
