@@ -20,6 +20,7 @@ module.exports = {
       },
       { name: 'Quickstart', link: '/quickstart' },
       { name: 'Contributors Guide', link: '/contributors-guide' },
+      { name: 'Advanced Git Commands', link: '/advanced-git-commands' },
       { name: 'Testing', link: '/tests'},
       { name: 'Ethsimulatev1 notes', link: '/ethsimulatev1-notes' },
     ],
